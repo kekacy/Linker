@@ -1,0 +1,26 @@
+
+.navbar{
+    background: rgb(255, 255, 255) ;
+}
+.navbar .navbar-nav>li>a{
+    color :black;
+    font-size: large;   
+}
+.navbar .navbar-nav>li>a:hover{
+    color:blue ;
+}
+.navbar .navbar-header a:hover{
+    color: rebeccapurple;
+}
+#sy_bg{
+    background-image: url("/static/images/hero-img.png");
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size:cover  ;
+    height: 200px;
+}
+
+#wenzi{
+    margin-top: 125px;
+    margin-left: 115px;
+}

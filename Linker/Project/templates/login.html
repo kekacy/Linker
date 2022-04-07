@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% from 'bootstrap/form.html' import render_form %}
+{% block biaoti %}
+    <h1>登录</h1>
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="col-sm-12"><h2></h2></div>
+    </div>
+    <div class="container">
+        <form class="form-horizontal" method="POST">
+            {{ form.csrf_token }}
+            <div class="form-group">
+                {{ form.username.label(class='col-sm-2 control-label') }}
+                <div class="col-sm-8">
+                    {{ form.username(class='form-control',placeholder='用户名') }}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form.password.label(class='col-sm-2 control-label') }}
+                <div class="col-sm-8">
+                    {{ form.password(class="form-control",placeholder="密码")}}
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-offset-2 col-sm-4">
+                    {{ form.remember(class='form-check-input') }}
+                    {{ form.remember.label }}
+                </div>
+                <div class="col-sm-2  ">
+                    {{ form.register(class='btn btn-primary btn-block btn-lg') }}
+                </div>
+                <div class="col-sm-2  ">
+                    {{ form.logon(class='btn btn-primary btn-block btn-lg') }}
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
